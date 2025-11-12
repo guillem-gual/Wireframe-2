@@ -16,16 +16,17 @@
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
             /* header */
-            .container {
+            .containerHeader {
                 grid-template-columns: 1fr 2fr 1fr;
                 grid-template-rows: 800px;
                 grid-template-areas:
                     "logo nav login";
                 gap: 10px;
                 display: grid;
-                justify-content: space-between;
                 font-weight: bold;
-                background-color: lightgrey;
+                background-image: url(IMG/imgHeader.jpg);
+                background-repeat: no-repeat;
+                background-size: contain;
             }
             .logo {
                 grid-area: logo;
@@ -33,14 +34,14 @@
                 justify-self: start;
                 padding-left: 30px;
                 padding-top: 20px;
-                font-size: 20px;
+                font-size: 25px;
                 color: #595959;
             }
             .nav {
                 grid-area: nav;
                 align-self: top;
                 justify-self: center;
-                font-size: 15px;
+                font-size: 20px;
                 color: #595959;
             }
             .nav span {
@@ -58,17 +59,110 @@
                 border-radius: 7px;
                 color: #C35C5C;
                 font-weight: bold;
-                font-size: 20px;
+                font-size: 25px;
                 background-color: rgba(198, 220, 255, 0.2);
                 border: solid 2px rgba(0, 0, 0, 0.1);
+            }
+
+            /*lastest albums*/
+            .lastest-albums {
+                text-align: center;
+                color: #595959;
+                background-color: #FEE9A8;
+                padding-top: 1px;
+            }
+            .lastest-albums h1 {
+                font-size: 100px;
+                margin-bottom: 0;
+            }
+            .lastest-albums p {
+                font-size: 20px;
+                margin-top: 5px;
+                padding-bottom: 35px;
+            }
+
+            .containerAlbums {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: auto;
+                grid-template-areas: 
+                    "album1 album2 album3 album4 album5";
+                gap: 10px;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+            .album {
+                text-align: center;
+            }
+            .album img {
+                width: 150px;
+            }
+            .albumName {
+                font-size: 30px;
+                font-weight: bold;
+                margin-top: 10px;
+                margin-bottom: 0;
+            }
+            .albumDescription {
+                font-size: 15px;
+                color: #595959;
+                font-style: italic;
             }
         </style>
     </head>
 
     <body>
-        <header class="container">
+        <header class="containerHeader">
             <div class="logo"><p>ONE SOUND</p></div>
             <div class="nav"><p><span>Home</span><span>Albums</span><span>Pages</span><span>Events</span><span>News</span><span>Contact</span></p></div>
             <div class="login"><p><button>Login/Register</button></p></div>
         </header>
+        <section>
+            <div class="lastest-albums">
+                <h1>LASTEST ALBUMS</h1>
+                <p>We got the newest every time</p>
+            </div>
+            <div class="containerAlbums">
+                <div class="album" style="grid-area: album1;">
+                    <img src="IMG/imgAlbum1.jpg" alt="Album 1">
+                    <p>
+                        <span class="albumName">Disobey</span>
+                        <br>
+                        <span class="albumDescription">"Sigue sonando!"</span>
+                    </p>
+                </div>
+                <div class="album" style="grid-area: album2;">
+                    <img src="IMG/imgAlbum2.jpg" alt="Album 2">
+                    <p>
+                        <span class="albumName">Cruzzi</span>
+                        <br>
+                        <span class="albumDescription">"Mejor album 2024"</span>
+                    </p>
+                </div>
+                <div class="album" style="grid-area: album3;">
+                    <img src="IMG/imgAlbum3.jpg" alt="Album 3">
+                    <p>
+                        <span class="albumName">Bon Calso</span>
+                        <br>
+                        <span class="albumDescription">"Nuevo del panorama"</span>
+                    </p>
+                </div>
+                <div class="album" style="grid-area: album4;">
+                    <img src="IMG/imgAlbum4.jpg" alt="Album 4">
+                    <p>
+                        <span class="albumName">MVRK</span>
+                        <br>
+                        <span class="albumDescription">"Sube como la espuma!"</span>
+                    </p>
+                </div>
+                <div class="album" style="grid-area: album5;">
+                    <img src="IMG/imgAlbum5.jpg" alt="Album 5">
+                    <p>
+                        <span class="albumName">Delaossa</span>
+                        <br>
+                        <span class="albumDescription">"Simplemente mítico"</span>
+                    </p>
+                </div>
+            </div>
+        </section>
     </body>
