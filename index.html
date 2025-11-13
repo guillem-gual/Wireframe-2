@@ -8,7 +8,7 @@
 		<meta name="keywords" content="">
 		<meta name="robots" content="index, follow">
 
-        <title>Wireframe Francesc</title>
+        <title>Wireframe 2</title>
 
         <style>
             body {
@@ -108,6 +108,50 @@
                 color: #595959;
                 font-style: italic;
             }
+
+            .hablan {
+                text-align: center;
+                font-size: 60px;
+                color: #FFCD00;
+                background-color: rgba(198, 220, 255, 0.8);
+                padding: 1px;
+            }
+            .opiniones {
+                background-image: url(IMG/imgFondoOpiniones.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                padding: 50px 0;
+            }
+
+            .opiniones table {
+                border: solid 2px #000000;
+                margin: 0 auto;
+                width: 1000px;
+                border-collapse: collapse;
+            }
+            .opiniones th {
+                font-size: 20px;
+                background-color: rgba(143, 127, 238, 0.8);
+                padding: 10px;
+                font-weight: bold;
+                border: solid 2px #000000;
+            }
+            .opiniones td {
+                font-size: 10px;
+                font-weight: bold;
+                text-align: center;
+                background-color: #FFFFFF;
+                padding: 30px;
+                border: solid 2px #000000;
+            }
+            tr:nth-child(even) td {
+                background-color: #8F7FEE;
+            }  
+            tr:nth-child(odd) td {
+                background-color: #DEDAFF;
+            }
+
         </style>
     </head>
 
@@ -117,6 +161,7 @@
             <div class="nav"><p><span>Home</span><span>Albums</span><span>Pages</span><span>Events</span><span>News</span><span>Contact</span></p></div>
             <div class="login"><p><button>Login/Register</button></p></div>
         </header>
+        
         <section>
             <div class="lastest-albums">
                 <h1>LASTEST ALBUMS</h1>
@@ -163,6 +208,29 @@
                         <span class="albumDescription">"Simplemente mítico"</span>
                     </p>
                 </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="hablan">
+                <h1>De lo que se habla !</h1>
+            </div>
+            <div class="opiniones">
+                <table>
+                    <thead><th>Opiniones del nuevo album</th></thead>
+                    <tr>
+                        <td>"Lorem ipsum dolor sit amet consectetur adipiscing elit placerat sagittis, risus nostra quam ad pharetra etiam hendrerit netus, natoque integer litora egestas inceptos metus vel nec. Accumsan cras velit varius augue integer nibh facilisis, convallis lobortis risus parturient metus nam sociosqu iaculis, aptent posuere litora in feugiat laoreet. Tortor senectus dignissim bibendum dapibus augue facilisis gravida etiam, lectus sem semper nec ridiculus tempor habitasse diam sociosqu, risus sed at quam curae per ultricies."</td>
+                    </tr>
+                    <tr>
+                        <td>"Lorem ipsum dolor sit amet consectetur adipiscing elit placerat sagittis, risus nostra quam ad pharetra etiam hendrerit netus, natoque integer litora egestas inceptos metus vel nec. Accumsan cras velit varius augue integer nibh facilisis, convallis lobortis risus parturient metus nam sociosqu iaculis, aptent posuere litora in feugiat laoreet. Tortor senectus dignissim bibendum dapibus augue facilisis gravida etiam, lectus sem semper nec ridiculus tempor habitasse diam sociosqu, risus sed at quam curae per ultricies."</td>
+                    </tr>
+                    <tr>
+                        <td>"Lorem ipsum dolor sit amet consectetur adipiscing elit placerat sagittis, risus nostra quam ad pharetra etiam hendrerit netus, natoque integer litora egestas inceptos metus vel nec. Accumsan cras velit varius augue integer nibh facilisis, convallis lobortis risus parturient metus nam sociosqu iaculis, aptent posuere litora in feugiat laoreet. Tortor senectus dignissim bibendum dapibus augue facilisis gravida etiam, lectus sem semper nec ridiculus tempor habitasse diam sociosqu, risus sed at quam curae per ultricies."</td>
+                    </tr>
+                    <tr>
+                        <td>"Lorem ipsum dolor sit amet consectetur adipiscing elit placerat sagittis, risus nostra quam ad pharetra etiam hendrerit netus, natoque integer litora egestas inceptos metus vel nec. Accumsan cras velit varius augue integer nibh facilisis, convallis lobortis risus parturient metus nam sociosqu iaculis, aptent posuere litora in feugiat laoreet. Tortor senectus dignissim bibendum dapibus augue facilisis gravida etiam, lectus sem semper nec ridiculus tempor habitasse diam sociosqu, risus sed at quam curae per ultricies."</td>
+                    </tr>
+                </table>
             </div>
         </section>
     </body>
