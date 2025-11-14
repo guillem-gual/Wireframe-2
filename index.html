@@ -109,6 +109,7 @@
                 font-style: italic;
             }
 
+            /*opinions*/
             .hablan {
                 text-align: center;
                 font-size: 60px;
@@ -152,6 +153,77 @@
                 background-color: #DEDAFF;
             }
 
+            /*listen*/
+            .listen {
+                text-align: center;
+                font-size: 60px;
+                font-weight: bold;
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                color: #FFCD00;
+                background-color: #FF0808;
+                padding: 1px;
+            }
+
+            .containerListen {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas:
+                    "listen1 listen2 listen3"
+                    "listen4 listen5 listen6";
+                gap: 30px;
+                background-color: rgba(89, 89, 89, 0.8);
+                padding-top: 30px;
+                padding-bottom: 60px;
+                text-align: center;
+            }
+            .alblisten1i3, .alblisten2, .alblisten4i6, .alblisten5 {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .alblisten1i3 img, .alblisten2 img, .alblisten4i6 img, .alblisten5 img {
+                width: 200px;
+            }
+            .alblisten1i3 span {
+                font-weight: bold;
+                text-align: center;
+                font-style: italic;
+                font-size: 10px;
+                display: inline-block;
+                background-color:#2DC75C ;
+                padding: 10px 79px;
+            }
+            .alblisten2 span {
+                font-weight: bold;
+                text-align: center;
+                font-style: italic;
+                font-size: 10px;
+                display: inline-block;
+                background-color:#8F7FEE ;
+                color: white;
+                padding: 10px 50px;
+            }
+            .alblisten4i6 span {
+                font-weight: bold;
+                text-align: center;
+                font-style: italic;
+                font-size: 10px;
+                display: inline-block;
+                background-color:#FE9F4D ;
+                padding: 10px 53px;
+            }
+            .alblisten5 span {
+                font-weight: bold;
+                text-align: center;
+                font-style: italic;
+                font-size: 10px;
+                display: inline-block;
+                background-color:#FFDC4A ;
+                padding: 10px 85px;
+            }
         </style>
     </head>
 
@@ -231,6 +303,56 @@
                         <td>"Lorem ipsum dolor sit amet consectetur adipiscing elit placerat sagittis, risus nostra quam ad pharetra etiam hendrerit netus, natoque integer litora egestas inceptos metus vel nec. Accumsan cras velit varius augue integer nibh facilisis, convallis lobortis risus parturient metus nam sociosqu iaculis, aptent posuere litora in feugiat laoreet. Tortor senectus dignissim bibendum dapibus augue facilisis gravida etiam, lectus sem semper nec ridiculus tempor habitasse diam sociosqu, risus sed at quam curae per ultricies."</td>
                     </tr>
                 </table>
+            </div>
+        </section>
+
+        <section>
+            <div class="listen">
+                <h1>LISTEN! LISTEN! LISTEN! LISTEN! LISTEN!</h1>
+            </div>
+            <div class="containerListen">
+                <div class="alblisten1i3" style="grid-area: listen1;">
+                    <img src="IMG/imgListen1i3.png" alt="Listen 1">
+                    <br>
+                    <span>THE END</span>
+                    <br>
+                    <img src="IMG/reproductor.jpg" alt="Reproductor">
+                </div>
+                <div class="alblisten2" style="grid-area: listen2;">
+                    <img src="IMG/imgListen2.jpg" alt="Listen 2">
+                    <br>
+                    <span>EL PLUGG II MIXTAPE</span>
+                    <br>
+                    <img src="IMG/reproductor.jpg" alt="Reproductor">
+                </div>
+                <div class="alblisten1i3" style="grid-area: listen3;">
+                    <img src="IMG/imgListen1i3.png" alt="Listen 3">
+                    <br>
+                    <span>THE END</span>
+                    <br>
+                    <img src="IMG/reproductor.jpg" alt="Reproductor">
+                </div>
+                <div class="alblisten4i6" style="grid-area: listen4;">
+                    <img src="IMG/imgListen4i6.jpg" alt="Listen 4">
+                    <br>
+                    <span>A KID NAMED KUDI</span>
+                    <br>
+                    <img src="IMG/reproductor.jpg" alt="Reproductor">
+                </div>
+                <div class="alblisten5" style="grid-area: listen5;">
+                    <img src="IMG/imgListen5.jpg" alt="Listen 5">
+                    <br>
+                    <span>DAISY</span>
+                    <br>
+                    <img src="IMG/reproductor.jpg" alt="Reproductor">
+                </div>
+                <div class="alblisten4i6" style="grid-area: listen6;">
+                    <img src="IMG/imgListen4i6.jpg" alt="Listen 6">
+                    <br>
+                    <span>A KID NAMED KUDI</span>
+                    <br>
+                    <img src="IMG/reproductor.jpg" alt="Reproductor">
+                </div>
             </div>
         </section>
     </body>
