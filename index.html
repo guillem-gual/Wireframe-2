@@ -18,7 +18,7 @@
             /* header */
             .containerHeader {
                 grid-template-columns: 1fr 2fr 1fr;
-                grid-template-rows: 800px;
+                grid-template-rows: auto auto 800px;
                 grid-template-areas:
                     "logo nav login";
                 gap: 10px;
@@ -26,7 +26,8 @@
                 font-weight: bold;
                 background-image: url(IMG/imgHeader.jpg);
                 background-repeat: no-repeat;
-                background-size: contain;
+                background-size: cover;
+                background-position: center;
             }
             .logo {
                 grid-area: logo;
@@ -65,17 +66,17 @@
             }
 
             /*lastest albums*/
-            .lastest-albums {
+            .lastestAlbums {
                 text-align: center;
                 color: #595959;
                 background-color: #FEE9A8;
                 padding-top: 1px;
             }
-            .lastest-albums h1 {
+            .lastestAlbums h1 {
                 font-size: 100px;
                 margin-bottom: 0;
             }
-            .lastest-albums p {
+            .lastestAlbums p {
                 font-size: 20px;
                 margin-top: 5px;
                 padding-bottom: 35px;
@@ -195,6 +196,7 @@
                 display: inline-block;
                 background-color:#2DC75C ;
                 padding: 10px 79px;
+                grid-area: listen1, listen3;
             }
             .alblisten2 span {
                 font-weight: bold;
@@ -205,6 +207,7 @@
                 background-color:#8F7FEE ;
                 color: white;
                 padding: 10px 50px;
+                grid-area: listen2;
             }
             .alblisten4i6 span {
                 font-weight: bold;
@@ -214,6 +217,7 @@
                 display: inline-block;
                 background-color:#FE9F4D ;
                 padding: 10px 53px;
+                grid-area: listen4, listen6;
             }
             .alblisten5 span {
                 font-weight: bold;
@@ -223,6 +227,7 @@
                 display: inline-block;
                 background-color:#FFDC4A ;
                 padding: 10px 85px;
+                grid-area: listen5;
             }
 
             /* footer */
@@ -259,6 +264,153 @@
                 padding-left: 5px;
             }
 
+            @media (max-width: 768px) {
+
+                /* header */
+                .containerHeader {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto auto 100px;
+                    grid-template-areas:
+                        "logo login"
+                        "none nav";
+                    background-image: url(IMG/imgHeaderMediaQueries.jpg);
+                    background-size: cover;
+                    background-position: top;
+                }
+                .logo {
+                    color: white;
+                    font-size: 20px;
+                }
+                .nav {
+                    justify-self: end;
+                    color: white;
+                    text-align: right;
+                    font-size: 15px;
+                    padding-right: 30px;
+                }
+                .nav p {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .login button {
+                    font-size: 15px;
+                    padding: 5px 7px;
+                }
+
+                /* lastest albums */
+                .lastestAlbums{
+                    background-image: url(IMG/lastestAlbFonsMediaQueries.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    color: white;
+                }   
+                .lastestAlbums h1 {
+                    font-size: 40px;
+                }
+                .lastestAlbums p {
+                    font-size: 15px;
+                }
+                .containerAlbums {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas:
+                        "album1 album2"
+                        "album3 album4"
+                        "album5 album5";
+                }
+                .album img {
+                    width: 120px;
+                }
+                .albumName {
+                    font-size: 20px;
+                }
+                .albumDescription {
+                    font-size: 10px;
+                }
+
+                /* opiniones */
+                .hablan {
+                    font-size: 20px;
+                }
+                .opiniones table {
+                    width: 90%;
+                }
+                .opiniones th {
+                    font-size: 10px;
+                    padding: 5px;
+                }
+                .opiniones td {
+                    font-size: 5px;
+                    padding: 15px;
+                }
+
+                /* listen */
+                
+                .listen h1 {
+                    font-size: 30px;
+                    margin : 10px 0;
+                }
+                .containerListen {
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-areas:
+                        "listen1 listen2 listen3"
+                        "listen4 listen5 listen6";
+                    gap: 5px;
+                }
+                .alblisten1i3 img, .alblisten2 img, .alblisten4i6 img, .alblisten5 img{
+                    width: 100px;;
+                }
+                .containerListen span {
+                    font-size: 8px;
+                    gap: 5px;
+                }
+                .alblisten1i3 span {
+                    padding: 5px 33px;
+                }
+                .alblisten2 span {
+                    padding: 5px 10px;
+                }
+                .alblisten4i6 span {
+                    padding: 5px 13px;
+                }
+                .alblisten5 span {
+                    padding: 5px 39px;
+                }
+
+                /* footer */
+                .footer {
+                    flex-direction:column-reverse;
+                    align-items: center;
+                    gap: 5px;
+                }
+                .footerLeft {
+                    justify-content: center;
+                    text-align: center;
+                    padding: 0px;
+                }
+                .footerLeft span {
+                    padding-inline: 5px;
+                    font-size: 10px;
+                }
+                .footerRight {
+                    justify-content: center;
+                    text-align: center;
+                }
+                .footerRight label {
+                    margin-right: 5px;
+                    padding: 0px;
+                    font-size: 10px;
+                }
+                .footerRight input {
+                    margin-bottom: 5px;
+                    margin-right: 5px;
+                    font-size: 10px;
+                }
+                .footerRight img {
+                    padding-left: 2px;
+                }
+            }
         </style>
     </head>
 
@@ -270,7 +422,7 @@
         </header>
         
         <section>
-            <div class="lastest-albums">
+            <div class="lastestAlbums">
                 <h1>LASTEST ALBUMS</h1>
                 <p>We got the newest every time</p>
             </div>
@@ -346,42 +498,42 @@
                 <h1>LISTEN! LISTEN! LISTEN! LISTEN! LISTEN!</h1>
             </div>
             <div class="containerListen">
-                <div class="alblisten1i3" style="grid-area: listen1;">
+                <div class="alblisten1i3">
                     <img src="IMG/imgListen1i3.png" alt="Listen 1">
                     <br>
                     <span>THE END</span>
                     <br>
                     <img src="IMG/reproductor.jpg" alt="Reproductor">
                 </div>
-                <div class="alblisten2" style="grid-area: listen2;">
+                <div class="alblisten2">
                     <img src="IMG/imgListen2.jpg" alt="Listen 2">
                     <br>
                     <span>EL PLUGG II MIXTAPE</span>
                     <br>
                     <img src="IMG/reproductor.jpg" alt="Reproductor">
                 </div>
-                <div class="alblisten1i3" style="grid-area: listen3;">
+                <div class="alblisten1i3">
                     <img src="IMG/imgListen1i3.png" alt="Listen 3">
                     <br>
                     <span>THE END</span>
                     <br>
                     <img src="IMG/reproductor.jpg" alt="Reproductor">
                 </div>
-                <div class="alblisten4i6" style="grid-area: listen4;">
+                <div class="alblisten4i6">
                     <img src="IMG/imgListen4i6.jpg" alt="Listen 4">
                     <br>
                     <span>A KID NAMED KUDI</span>
                     <br>
                     <img src="IMG/reproductor.jpg" alt="Reproductor">
                 </div>
-                <div class="alblisten5" style="grid-area: listen5;">
+                <div class="alblisten5">
                     <img src="IMG/imgListen5.jpg" alt="Listen 5">
                     <br>
                     <span>DAISY</span>
                     <br>
                     <img src="IMG/reproductor.jpg" alt="Reproductor">
                 </div>
-                <div class="alblisten4i6" style="grid-area: listen6;">
+                <div class="alblisten4i6">
                     <img src="IMG/imgListen4i6.jpg" alt="Listen 6">
                     <br>
                     <span>A KID NAMED KUDI</span>
